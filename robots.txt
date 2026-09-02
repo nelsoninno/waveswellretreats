@@ -1,0 +1,11 @@
+# robots.txt for waveswellretreats.com
+# Every page is open and indexable, including AI search and user-fetch agents.
+# The guests page is intentionally kept out of the index (it is unlisted, not secret).
+
+User-agent: *
+Allow: /
+Disallow: /guests.html
+Disallow: /es/guests.html
+
+# AI guide: /llms.txt
+Sitemap: https://waveswellretreats.com/sitemap.xml

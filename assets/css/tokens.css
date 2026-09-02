@@ -1,0 +1,71 @@
+/* ============================================================
+   tokens.css  ·  waveswellretreats.com
+   COLORS + FONTS ONLY. This is the single file to edit to re-skin
+   the whole site. Nothing else in the project hard-codes a hex.
+
+   Source of truth: "WAVES WELL 001_R.ai", Josselyn's own brand
+   manual. Page 02 defines the palette, page 04 the typefaces.
+   The old WordPress site used the WaveRide theme's approximations
+   (#0DE3D9, Josefin Sans); these are the real values.
+   ============================================================ */
+:root{
+
+  /* ---- Brand palette (from the brand manual, page 02) ------ */
+  --accent:        #2ED9C3;   /* PANTONE 333C · RGB 46 217 195 · the Waveswell turquoise */
+  --accent-deep:   #0D7A6E;   /* darkened 333C, for readable text and links on white */
+  --accent-soft:   #D9F7F2;   /* pale turquoise wash for cards and bands */
+
+  --ink:           #101820;   /* PANTONE BLACK 6C · RGB 16 24 32 · text, footer, dark bands */
+  --ink-soft:      #22303B;   /* secondary dark for longer paragraphs */
+  --muted:         #5A6B70;   /* secondary text */
+
+  --violet:        #9578D3;   /* PANTONE 243C · RGB 149 120 211 */
+  --blossom:       #EDB7E3;   /* PANTONE 243C · RGB 237 183 227 */
+  --sun:           #FF5C35;   /* PANTONE 171C · RGB 255 92 53 */
+  --sun-soft:      #FFEDE7;
+
+  --bg:            #FFFFFF;   /* page background */
+  --surface:       #F1FBF9;   /* alternating section band, cool */
+  --sand:          #FBF7F2;   /* warm alternating band */
+  --line:          #E2EDEB;   /* hairlines and card borders */
+
+  /* ---- Footer credit colors (read by the EKY logo) --------- */
+  --footer-bg:     var(--ink);
+  --footer-fg:     #FFFFFF;
+
+  /* ---- Fonts (brand manual, page 04) ----------------------
+     The manual assigns three roles: Futurist Extra Heavy for the
+     logo and titles, Futura Book for headings and text, Futura
+     Condensed Bold for subheads.
+
+     None of the three TTFs in Josselyn's folder can go on a web
+     server. Two carry fsType 4, Preview and Print only, and the
+     Futurist file states "Redistribution strictly prohibited" in
+     its own copyright string. Adobe Fonts is also out: Adobe's
+     terms forbid serving web fonts on a client's site from the
+     designer's account, and the fonts stop rendering the day
+     anyone's subscription lapses. So the site uses open faces,
+     chosen by rendering each candidate against her actual files at
+     matched cap height rather than by reputation.
+
+       Futurist Extra Heavy  ->  League Spartan 700 / 900
+       Futura Book           ->  Jost 400 / 500 / 600
+       Futura Condensed Bold ->  no good open equivalent, so the
+                                 subhead role is small tracked caps
+                                 in Jost instead
+
+     Body copy is Nunito Sans, not Jost. Geometric faces have a
+     small x-height and most of these readers are 55 to 75, so
+     paragraphs need a taller, more humanist face.               */
+  --font-display: 'League Spartan', 'Futura', 'Century Gothic', system-ui, sans-serif;
+  --font-ui:      'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
+  --font-body:    'Nunito Sans', 'Segoe UI', system-ui, sans-serif;
+
+  /* ---- Layout ---------------------------------------------- */
+  --max:      1180px;
+  --max-text: 760px;
+  --radius:   18px;
+  --radius-s: 10px;
+  --shadow:   0 18px 50px rgba(16,24,32,.10);
+  --shadow-s: 0 6px 20px rgba(16,24,32,.07);
+}

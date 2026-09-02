@@ -1,0 +1,16 @@
+{
+  "name": "Waveswell Retreats",
+  "short_name": "Waveswell",
+  "description": "Seven day stand up paddle surf retreats in El Salvador with Joss Alabi.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0DE3D9",
+  "lang": "en",
+  "icons": [
+    {"src":"/favicon-192x192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"/favicon-512x512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"/apple-touch-icon.png","sizes":"180x180","type":"image/png","purpose":"any"}
+  ]
+}
