@@ -5,8 +5,6 @@
 
    Source of truth: "WAVES WELL 001_R.ai", Josselyn's own brand
    manual. Page 02 defines the palette, page 04 the typefaces.
-   The old WordPress site used the WaveRide theme's approximations
-   (#0DE3D9, Josefin Sans); these are the real values.
    ============================================================ */
 :root{
 
@@ -38,25 +36,20 @@
      logo and titles, Futura Book for headings and text, Futura
      Condensed Bold for subheads.
 
-     None of the three TTFs in Josselyn's folder can go on a web
-     server. Two carry fsType 4, Preview and Print only, and the
-     Futurist file states "Redistribution strictly prohibited" in
-     its own copyright string. Adobe Fonts is also out: Adobe's
-     terms forbid serving web fonts on a client's site from the
-     designer's account, and the fonts stop rendering the day
-     anyone's subscription lapses. So the site uses open faces,
-     chosen by rendering each candidate against her actual files at
-     matched cap height rather than by reputation.
+     Those Futura files are licensed for print and design work, not
+     for serving from a web server, so they are not part of this
+     site and must not be uploaded to it. The web build uses open
+     faces chosen to match them, compared at equal cap height:
 
        Futurist Extra Heavy  ->  League Spartan 700 / 900
        Futura Book           ->  Jost 400 / 500 / 600
-       Futura Condensed Bold ->  no good open equivalent, so the
+       Futura Condensed Bold ->  no close open equivalent, so the
                                  subhead role is small tracked caps
                                  in Jost instead
 
      Body copy is Nunito Sans, not Jost. Geometric faces have a
-     small x-height and most of these readers are 55 to 75, so
-     paragraphs need a taller, more humanist face.               */
+     small x-height, and long paragraphs read better in a taller,
+     more humanist face.                                         */
   --font-display: 'League Spartan', 'Futura', 'Century Gothic', system-ui, sans-serif;
   --font-ui:      'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
   --font-body:    'Nunito Sans', 'Segoe UI', system-ui, sans-serif;

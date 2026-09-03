@@ -20,10 +20,12 @@ assets/css/tokens.css   ALL the colours and fonts. Edit this to re-skin the site
 assets/css/styles.css   everything else about how it looks
 assets/js/main.js       the mobile menu and the gentle fade-in
 assets/images/          the photos used on the site, as .webp
-_source/                your original photos and documents, kept as backup
-brand/brand.md          the plain language brand sheet
 llms.txt                what AI assistants read to describe the business
 ```
+
+Your original photos, the brand sheet and the image manifest are kept in the
+working copy of this project rather than in this repository, because everything
+committed here is served publicly by the hosting.
 
 ## How to ask for a change
 
@@ -47,15 +49,16 @@ Two rules keep the site working:
 
 ## Where to drop new photos
 
-Put the original in `_source/photos-original/`. The web copy goes in
-`assets/images/` under the right folder, saved as `.webp`, named like this:
+Keep the original with the rest of your photos in the working copy. The web copy
+goes in `assets/images/` under the right folder, saved as `.webp`, named like
+this:
 
 ```
 {what-it-is}-{who-or-what}-waveswellretreats.com.webp
 ```
 
-For example `hero-joss-alabi-waveswellretreats.com.webp`. `IMAGE-MANIFEST.md`
-lists every image slot on the site and what belongs in it.
+For example `hero-joss-alabi-waveswellretreats.com.webp`. The image manifest in
+the working copy lists every image slot on the site and what belongs in it.
 
 ## Things that must stay true
 
