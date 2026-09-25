@@ -396,6 +396,30 @@ section{position:relative}
 .eky-credit__text{color:var(--footer-fg)}
 .eky-credit svg{--eky-bg:var(--footer-bg);height:18px;width:auto;display:block}
 
+/* ---------- testimonial video ---------- */
+.videowrap{
+  margin:clamp(2rem,1.5rem + 2vw,3rem) auto 0;max-width:340px;text-align:center;
+}
+.videowrap video{
+  display:block;width:100%;height:auto;border-radius:var(--radius);
+  background:var(--ink);box-shadow:var(--shadow);
+}
+.videowrap figcaption{
+  margin-top:.8rem;font-family:var(--font-body);font-size:.9rem;color:var(--muted);
+}
+
+/* ---------- pillar list (Mar de Suenos) ---------- */
+ul.pillars{list-style:none;margin:1rem 0 0;padding:0}
+ul.pillars li{
+  position:relative;padding-left:1.1rem;margin-bottom:.75rem;
+  font-family:var(--font-body);line-height:1.6;
+}
+ul.pillars li::before{
+  content:"";position:absolute;left:0;top:.62em;
+  width:6px;height:6px;border-radius:50%;background:var(--accent);
+}
+ul.pillars strong{font-family:var(--font-ui);font-weight:600;color:var(--ink)}
+
 /* ---------- scroll reveal ---------- */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
