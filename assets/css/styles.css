@@ -396,16 +396,29 @@ section{position:relative}
 .eky-credit__text{color:var(--footer-fg)}
 .eky-credit svg{--eky-bg:var(--footer-bg);height:18px;width:auto;display:block}
 
-/* ---------- testimonial video ---------- */
-.videowrap{
-  margin:clamp(2rem,1.5rem + 2vw,3rem) auto 0;max-width:340px;text-align:center;
+/* ---------- testimonials: featured video beside its quote ----------
+   Row 1 is Sherry: her clip on the left, her written quote on the right.
+   Row 2 is the other two quotes. The clip is portrait, so the column is
+   capped rather than fluid, otherwise it grows taller than the text. */
+.testi-lead{
+  display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);
+  gap:clamp(1.4rem,1rem + 1.8vw,2.4rem);align-items:center;
+  margin-bottom:clamp(1.1rem,.6rem + 1.6vw,2rem);
 }
-.videowrap video{
+.testi-lead__video{margin:0}
+.testi-lead__video video{
   display:block;width:100%;height:auto;border-radius:var(--radius);
   background:var(--ink);box-shadow:var(--shadow);
 }
-.videowrap figcaption{
-  margin-top:.8rem;font-family:var(--font-body);font-size:.9rem;color:var(--muted);
+.testi-lead__video figcaption{
+  margin-top:.75rem;font-family:var(--font-body);font-size:.88rem;
+  color:var(--muted);text-align:center;
+}
+.testi-lead__quote{height:auto}
+
+@media (max-width:780px){
+  .testi-lead{grid-template-columns:1fr}
+  .testi-lead__video{max-width:320px;margin:0 auto}
 }
 
 /* ---------- pillar list (Mar de Suenos) ---------- */
