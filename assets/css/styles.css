@@ -331,6 +331,13 @@ section{position:relative}
 .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .gallery figure:hover img{transform:scale(1.06)}
 
+/* ---------- photo grid (even tiles, any number of images) ---------- */
+.photogrid{display:grid;gap:.8rem;grid-template-columns:repeat(4,1fr)}
+.photogrid figure{margin:0;border-radius:var(--radius-s);overflow:hidden;background:var(--surface);aspect-ratio:1/1}
+.photogrid img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.photogrid figure:hover img{transform:scale(1.06)}
+@media (max-width:820px){.photogrid{grid-template-columns:repeat(2,1fr)}}
+
 /* ---------- FAQ ---------- */
 .faq-item{border-bottom:1px solid var(--line)}
 .faq-item summary{
@@ -539,7 +546,6 @@ table.data td strong{font-variant-numeric:tabular-nums}
 .timeline .events a.ev:hover,.timeline .events a.ev:focus-visible{border-bottom-color:var(--accent);color:var(--accent-deep)}
 .timeline .events .res{color:var(--muted)}
 .timeline .events .res::before{content:"\00a0\00b7\00a0"}
-.timeline-note{margin-top:1.1rem;font-size:.86rem;color:var(--muted)}
 
 /* ---------- logo wall ---------- */
 .logowall{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;align-items:center;justify-content:center;margin-top:1.6rem}
