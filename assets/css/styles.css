@@ -521,11 +521,25 @@ table.data td strong{font-variant-numeric:tabular-nums}
 
 /* ---------- timeline (competition record) ---------- */
 .timeline{border-left:2px solid var(--line);padding-left:1.8rem;max-width:760px}
-.timeline li{position:relative;padding-bottom:1.7rem}
-.timeline li:last-child{padding-bottom:0}
-.timeline li::before{content:"";position:absolute;left:-2.22rem;top:.4em;width:13px;height:13px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.timeline > li{position:relative;padding-bottom:1.7rem}
+.timeline > li:last-child{padding-bottom:0}
+.timeline > li::before{content:"";position:absolute;left:-2.22rem;top:.4em;width:13px;height:13px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
 .timeline .yr{font-family:var(--font-display);font-weight:700;color:var(--accent-deep);font-size:1.05rem;display:block;margin-bottom:.3rem}
-.timeline p{color:var(--ink-soft);font-size:.98rem}
+.timeline > li > p{color:var(--ink-soft);font-size:.98rem;margin-bottom:.5rem}
+
+/* one line per competition inside a year */
+.timeline .events{list-style:none;margin:0;padding:0}
+.timeline .events > li{position:relative;padding:.2rem 0 .2rem 1.05rem;font-size:.95rem;line-height:1.5}
+.timeline .events > li::before{
+  content:"";position:absolute;left:0;top:.78em;
+  width:5px;height:5px;border-radius:50%;background:var(--accent)
+}
+.timeline .events .ev{font-weight:600;color:var(--ink)}
+.timeline .events a.ev{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.timeline .events a.ev:hover,.timeline .events a.ev:focus-visible{border-bottom-color:var(--accent);color:var(--accent-deep)}
+.timeline .events .res{color:var(--muted)}
+.timeline .events .res::before{content:"\00a0\00b7\00a0"}
+.timeline-note{margin-top:1.1rem;font-size:.86rem;color:var(--muted)}
 
 /* ---------- logo wall ---------- */
 .logowall{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;align-items:center;justify-content:center;margin-top:1.6rem}
